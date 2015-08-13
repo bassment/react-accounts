@@ -1,4 +1,7 @@
 @AmmountBox = React.createClass
+  amountFormat: (amount) ->
+    "$ " + Number(amount).toLocaleString()
+
   render: ->
     React.DOM.div
       className: 'col-md-4'
@@ -9,4 +12,4 @@
           @props.text
         React.DOM.div
           className: 'panel-body'
-          amountFormat(@props.amount)
+          @amountFormat(@props.amount)
